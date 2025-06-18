@@ -1,0 +1,109 @@
+:root {
+  /* Colors */
+  --text-brand-on-brand: #f5f5f5;
+  --text-default-default: #1e1e1e;
+  --text-neutral-default: #303030;
+  --text-disabled-on-disabled: #b3b3b3;
+  
+  --background-brand-default: #2c2c2c;
+  --background-brand-hover: #1e1e1e;
+  --background-neutral-tertiary: #e3e3e3;
+  --background-neutral-tertiary-hover: #cdcdcd;
+  --background-disabled-default: #d9d9d9;
+  
+  --border-brand-default: #2c2c2c;
+  --border-neutral-secondary: #767676;
+  --border-disabled-default: #b3b3b3;
+  --border-default-default: #d9d9d9;
+  --border-neutral-default: #303030;
+  
+  /* Spacing */
+  --space-200: 8px;
+  --space-300: 12px;
+  
+  /* Border */
+  --stroke-border: 1px;
+  --radius-200: 8px;
+  
+  /* Typography */
+  --body-font-family: 'Inter', sans-serif;
+  --body-font-size: 16px;
+  --body-font-weight: 400;
+  --body-line-height: 1;
+
+  /* Icon Button Specific */
+  --icon-size-small: 32px;
+  --icon-size-medium: 40px;
+}
+
+/* Base Icon Button Styles */
+.sds-icon-button {
+  font-family: var(--body-font-family);
+  border-radius: var(--radius-200);
+  border: var(--stroke-border) solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+/* Size Variants */
+.sds-icon-button-medium {
+  width: var(--icon-size-medium);
+  height: var(--icon-size-medium);
+}
+
+.sds-icon-button-small {
+  width: var(--icon-size-small);
+  height: var(--icon-size-small);
+}
+
+/* Primary Icon Button */
+.sds-icon-button-primary {
+  background-color: var(--background-brand-default);
+  border-color: var(--border-brand-default);
+  color: var(--text-brand-on-brand);
+}
+
+.sds-icon-button-primary:hover:not(:disabled) {
+  background-color: var(--background-brand-hover);
+  border-color: var(--border-brand-default);
+}
+
+/* Neutral Icon Button */
+.sds-icon-button-neutral {
+  background-color: var(--background-neutral-tertiary);
+  border-color: var(--border-neutral-secondary);
+  color: var(--text-default-default);
+}
+
+.sds-icon-button-neutral:hover:not(:disabled) {
+  background-color: var(--background-neutral-tertiary-hover);
+}
+
+/* Subtle Icon Button */
+.sds-icon-button-subtle {
+  background-color: transparent;
+  color: var(--text-neutral-default);
+}
+
+.sds-icon-button-subtle:hover:not(:disabled) {
+  border-color: var(--border-default-default);
+}
+
+/* Disabled State */
+.sds-icon-button:disabled {
+  background-color: var(--background-disabled-default);
+  border-color: var(--border-disabled-default);
+  color: var(--text-disabled-on-disabled);
+  cursor: not-allowed;
+}
+
+/* Icon Size */
+.sds-icon-button svg {
+  width: calc(var(--space-300) * 1.5);
+  height: calc(var(--space-300) * 1.5);
+}

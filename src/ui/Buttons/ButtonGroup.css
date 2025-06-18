@@ -1,0 +1,91 @@
+:root {
+  /* Spacing */
+  --space-200: 8px;
+  --space-300: 12px;
+}
+
+/* Base Button Group Styles */
+.sds-button-group {
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  align-items: center;
+}
+
+/* Alignment Variants */
+.sds-button-group-start {
+  justify-content: flex-start;
+}
+
+.sds-button-group-center {
+  justify-content: center;
+}
+
+.sds-button-group-end {
+  justify-content: flex-end;
+}
+
+.sds-button-group-stack {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Gap Variants */
+.sds-button-group-gap-small {
+  gap: var(--space-200);
+}
+
+.sds-button-group-gap-medium {
+  gap: var(--space-300);
+}
+
+/* Button styling within groups */
+.sds-button-group > button {
+  flex: 0 0 auto;
+}
+
+/* Connect buttons in horizontal groups */
+.sds-button-group:not(.sds-button-group-stack) > button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+  margin-left: -1px;
+}
+
+.sds-button-group:not(.sds-button-group-stack) > button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.sds-button-group:not(.sds-button-group-stack) > button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+}
+
+/* Connect buttons in vertical groups */
+.sds-button-group-stack > button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+  margin-top: -1px;
+}
+
+.sds-button-group-stack > button:first-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.sds-button-group-stack > button:last-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: -1px;
+}
+
+/* Hover states for connected buttons */
+.sds-button-group button:hover {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure disabled buttons don't affect layout */
+.sds-button-group button:disabled {
+  position: relative;
+  z-index: 0;
+}

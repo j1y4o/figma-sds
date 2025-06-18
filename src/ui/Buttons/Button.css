@@ -1,0 +1,161 @@
+:root {
+  /* Colors */
+  --text-brand-on-brand: #f5f5f5;
+  --text-default-default: #1e1e1e;
+  --text-neutral-default: #303030;
+  --text-disabled-on-disabled: #b3b3b3;
+  
+  --background-brand-default: #2c2c2c;
+  --background-brand-hover: #1e1e1e;
+  --background-neutral-tertiary: #e3e3e3;
+  --background-neutral-tertiary-hover: #cdcdcd;
+  --background-disabled-default: #d9d9d9;
+  
+  --border-brand-default: #2c2c2c;
+  --border-neutral-secondary: #767676;
+  --border-disabled-default: #b3b3b3;
+  --border-default-default: #d9d9d9;
+  --border-neutral-default: #303030;
+  
+  /* Spacing */
+  --space-200: 8px;
+  --space-300: 12px;
+  
+  /* Border */
+  --stroke-border: 1px;
+  --radius-200: 8px;
+  
+  /* Typography */
+  --body-font-family: 'Inter', sans-serif;
+  --body-font-size: 16px;
+  --body-font-weight: 400;
+  --body-line-height: 1;
+}
+
+/* Base Button Styles */
+.sds-button {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  border-radius: var(--radius-200);
+  border: var(--stroke-border) solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Size Variants */
+.sds-button-medium {
+  padding: var(--space-300);
+  gap: var(--space-200);
+}
+
+.sds-button-small {
+  padding: var(--space-200);
+  gap: var(--space-200);
+}
+
+/* Primary Button */
+.sds-button-primary {
+  background-color: var(--background-brand-default);
+  border-color: var(--border-brand-default);
+  color: var(--text-brand-on-brand);
+}
+
+.sds-button-primary:hover:not(:disabled) {
+  background-color: var(--background-brand-hover);
+  border-color: var(--border-brand-default);
+}
+
+/* Neutral Button */
+.sds-button-neutral {
+  background-color: var(--background-neutral-tertiary);
+  border-color: var(--border-neutral-secondary);
+  color: var(--text-default-default);
+}
+
+.sds-button-neutral:hover:not(:disabled) {
+  background-color: var(--background-neutral-tertiary-hover);
+}
+
+/* Subtle Button */
+.sds-button-subtle {
+  background-color: transparent;
+  color: var(--text-neutral-default);
+}
+
+.sds-button-subtle:hover:not(:disabled) {
+  border-color: var(--border-default-default);
+}
+
+/* Disabled State (applies to all variants) */
+.sds-button:disabled {
+  background-color: var(--background-disabled-default);
+  border-color: var(--border-disabled-default);
+  color: var(--text-disabled-on-disabled);
+  cursor: not-allowed;
+}
+.sds-button {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Size Variants */
+.sds-button-medium {
+  padding: 12px;
+}
+
+.sds-button-small {
+  padding: 8px;
+}
+
+/* Primary Button */
+.sds-button-primary {
+  background-color: #2c2c2c;
+  border-color: #2c2c2c;
+  color: #f5f5f5;
+}
+
+.sds-button-primary:hover:not(:disabled) {
+  background-color: #1e1e1e;
+  border-color: #2c2c2c;
+}
+
+/* Neutral Button */
+.sds-button-neutral {
+  background-color: #e3e3e3;
+  border-color: #767676;
+  color: #1e1e1e;
+}
+
+.sds-button-neutral:hover:not(:disabled) {
+  background-color: #cdcdcd;
+}
+
+/* Subtle Button */
+.sds-button-subtle {
+  background-color: transparent;
+  color: #303030;
+}
+
+.sds-button-subtle:hover:not(:disabled) {
+  background-color: transparent;
+  border-color: #d9d9d9;
+}
+
+/* Disabled State (applies to all variants) */
+.sds-button:disabled {
+  background-color: #d9d9d9;
+  border-color: #b3b3b3;
+  color: #b3b3b3;
+  cursor: not-allowed;
+}

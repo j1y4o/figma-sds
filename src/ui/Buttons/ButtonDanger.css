@@ -1,0 +1,70 @@
+:root {
+  /* Colors */
+  --text-brand-on-brand: #f5f5f5;
+  --text-danger-on-danger: #FFFFFF;
+  --text-disabled-on-disabled: #b3b3b3;
+  
+  --background-danger-default: #DC3545;
+  --background-danger-hover: #C82333;
+  --background-disabled-default: #d9d9d9;
+  
+  --border-danger-default: #DC3545;
+  --border-disabled-default: #b3b3b3;
+  
+  /* Spacing */
+  --space-200: 8px;
+  --space-300: 12px;
+  
+  /* Border */
+  --stroke-border: 1px;
+  --radius-200: 8px;
+  
+  /* Typography */
+  --body-font-family: 'Inter', sans-serif;
+  --body-font-size: 16px;
+  --body-font-weight: 400;
+  --body-line-height: 1;
+}
+
+/* Base Button Styles */
+.sds-button-danger {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  border-radius: var(--radius-200);
+  border: var(--stroke-border) solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-danger-default);
+  border-color: var(--border-danger-default);
+  color: var(--text-danger-on-danger);
+}
+
+/* Size Variants */
+.sds-button-danger-medium {
+  padding: var(--space-300);
+  gap: var(--space-200);
+}
+
+.sds-button-danger-small {
+  padding: var(--space-200);
+  gap: var(--space-200);
+}
+
+/* Hover State */
+.sds-button-danger:hover:not(:disabled) {
+  background-color: var(--background-danger-hover);
+  border-color: var(--background-danger-hover);
+}
+
+/* Disabled State */
+.sds-button-danger:disabled {
+  background-color: var(--background-disabled-default);
+  border-color: var(--border-disabled-default);
+  color: var(--text-disabled-on-disabled);
+  cursor: not-allowed;
+}
